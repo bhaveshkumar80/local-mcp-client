@@ -17,7 +17,7 @@ Before you help a user, you need to work with tools to interact with Our Databas
 
 async def get_agent(tool: McpToolSpec):
     """Create and retun a FunctionAgent with the given tool"""
-    tools = await tools.to_tool_list_async()
+    tools = await tool.to_tool_list_async()
     agent = FunctionAgent(
         name="Agent",
         description="An agent that can work with our Database software",
